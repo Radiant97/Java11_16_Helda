@@ -1,6 +1,8 @@
 package by.tc.sport_equipment.bean;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable{
     private String login;
     private String password;
 

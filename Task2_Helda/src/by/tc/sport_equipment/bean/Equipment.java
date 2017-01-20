@@ -1,6 +1,8 @@
 package by.tc.sport_equipment.bean;
 
-public class Equipment {
+import java.io.Serializable;
+
+public class Equipment implements Serializable{
     private String title;
     private int price;
     private Category category;
