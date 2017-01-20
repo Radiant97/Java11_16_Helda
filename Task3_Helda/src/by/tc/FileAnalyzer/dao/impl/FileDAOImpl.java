@@ -8,17 +8,14 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class FileDAOImpl implements FileDAO{
+public class FileDAOImpl implements FileDAO, AutoCloseable{
     private BufferedReader fileReader;
-    private int offset;
-    private final int length = 200;
 
     @Override
     public String read() throws DAOException {
-        //char[] buff = null;
         try {
-            String s = fileReader.readLine();
-            return s;
+            String line = fileReader.readLine();
+            return line;
         } catch (IOException e) {
             throw new DAOException("Error during reading file process.");
         }
@@ -31,9 +28,13 @@ public class FileDAOImpl implements FileDAO{
         }
         try {
             fileReader = new BufferedReader(new FileReader(filePath));
-            offset = 0;
         } catch (FileNotFoundException e) {
             throw new DAOException("File not found.");
         }
+    }
+
+    @Override
+    public void close() throws Exception {
+        fileReader.close();
     }
 }
