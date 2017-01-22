@@ -36,9 +36,10 @@
       <file leaf-file-name="SQLUserDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/impl/SQLUserDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-31">
-              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="425">
+              <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <marker date="1484626842686" expanded="true" signature="814:848" ph="SELECT * FRO... users" />
                 <marker date="1484626842686" expanded="true" signature="814:849" ph="SELECT * FRO... users" />
                 <marker date="1484626842686" expanded="true" signature="814:850" ph="SELECT * FRO... users" />
@@ -49,30 +50,6 @@
                 <marker date="1484626842686" expanded="true" signature="3525:3570" ph="SELECT * FRO... users" />
                 <marker date="1484626842686" expanded="true" signature="3807:3872" ph="SELECT * FRO... equipments" />
                 <marker date="1484626842686" expanded="true" signature="3974:4065" ph="INSERT INTO orders... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DAOFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/factory/DAOFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="20" column="70" selection-start-line="9" selection-start-column="4" selection-end-line="20" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/bean/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,6 +72,30 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShopService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/service/ShopService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/view/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -103,19 +104,23 @@
       <file leaf-file-name="ClientServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/service/impl/ClientServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="153">
+              <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/bean/Category.java">
+      <file leaf-file-name="ShopServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/service/impl/ShopServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-              <folding />
+              <caret line="14" column="67" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,27 +130,37 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/bean/User.java">
+      <file leaf-file-name="EquipmentDAO.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/EquipmentDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="170">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Equipment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/bean/Equipment.java">
+      <file leaf-file-name="SQLEquipmentDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/impl/SQLEquipmentDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-              <folding />
+            <state relative-caret-position="442">
+              <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+              <folding>
+                <marker date="1485104585917" expanded="true" signature="1073:1118" ph="SELECT * FRO... users" />
+                <marker date="1485104585917" expanded="true" signature="1355:1392" ph="SELECT * FRO... orders" />
+                <marker date="1485104585917" expanded="true" signature="1355:1407" ph="SELECT * FRO... orders" />
+                <marker date="1485104585917" expanded="true" signature="1355:1408" ph="INSERT INTO orders... " />
+                <marker date="1485104585917" expanded="true" signature="1585:1645" ph="SELECT * FRO... equipments" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -184,33 +199,34 @@
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/AddEquipment.java" />
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/SingIn.java" />
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/Controller.java" />
-        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/dao/DBConnection.java" />
         <option value="C:/Program Files (x86)/JavaSoft/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar!/com/mysql/jdbc/NonRegisteringDriver.class" />
-        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/Command.java" />
-        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/SignIn.java" />
-        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/WrongRequest.java" />
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/RENT.java" />
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/bean/Category.java" />
-        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/Register.java" />
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/Rent.java" />
-        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/CommandName.java" />
-        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/CommandProvider.java" />
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/service/ClientService.java" />
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/dao/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/RentEquipment.java" />
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/RentRecord.java" />
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/service/impl/ClientServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/service/ShopService.java" />
-        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/GetRentRecord.java" />
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/service/impl/ShopServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/dao/EquipmentDAO.java" />
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/dao/impl/SQLUserDAO.java" />
-        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/dao/impl/SQLEquipmentDAO.java" />
-        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/view/Main.java" />
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/bean/Equipment.java" />
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/bean/Order.java" />
         <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/bean/User.java" />
+        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/CommandName.java" />
+        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/exception/CommandException.java" />
+        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/CommandProvider.java" />
+        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/Command.java" />
+        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/WrongRequest.java" />
+        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/GetRentRecord.java" />
+        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/Register.java" />
+        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/RentEquipment.java" />
+        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/SignIn.java" />
+        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/dao/impl/SQLEquipmentDAO.java" />
+        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/service/ShopService.java" />
+        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/view/Main.java" />
+        <option value="$PROJECT_DIR$/src/by/tc/sport_equipment/dao/EquipmentDAO.java" />
       </list>
     </option>
   </component>
@@ -258,6 +274,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -362,7 +381,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Task2_Helda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Task2_Helda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="by" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sport_equipment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -396,47 +445,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task2_Helda" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task2_Helda" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="by" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sport_equipment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bean" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Task3_Helda" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -908,12 +924,14 @@
       <workItem from="1484736057633" duration="11000" />
       <workItem from="1484736296868" duration="227000" />
       <workItem from="1484857300314" duration="867000" />
-      <workItem from="1484893842109" duration="4533000" />
+      <workItem from="1484893842109" duration="4626000" />
+      <workItem from="1485100374208" duration="4300000" />
+      <workItem from="1485110261053" duration="109000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45526000" />
+    <option name="totallyTimeSpent" value="50028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -925,8 +943,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22660099" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22660099" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -963,25 +981,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/impl/SQLUserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <marker date="1484626842686" expanded="true" signature="814:848" ph="SELECT * FRO... users" />
-            <marker date="1484626842686" expanded="true" signature="814:849" ph="SELECT * FRO... users" />
-            <marker date="1484626842686" expanded="true" signature="814:850" ph="SELECT * FRO... users" />
-            <marker date="1484626842686" expanded="true" signature="814:859" ph="SELECT * FRO... users" />
-            <marker date="1484626842686" expanded="true" signature="2110:2160" ph="INSERT INTO `users`... " />
-            <marker date="1484626842686" expanded="true" signature="2110:2176" ph="INSERT INTO users... " />
-            <marker date="1484626842686" expanded="true" signature="2110:2195" ph="INSERT INTO users... " />
-            <marker date="1484626842686" expanded="true" signature="3525:3570" ph="SELECT * FRO... users" />
-            <marker date="1484626842686" expanded="true" signature="3807:3872" ph="SELECT * FRO... equipments" />
-            <marker date="1484626842686" expanded="true" signature="3974:4065" ph="INSERT INTO orders... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/exception/DAOException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1056,7 +1055,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1065,6 +1066,7 @@
         <state relative-caret-position="204">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1484626842686" expanded="true" signature="814:848" ph="SELECT * FRO... users" />
             <marker date="1484626842686" expanded="true" signature="814:849" ph="SELECT * FRO... users" />
             <marker date="1484626842686" expanded="true" signature="814:850" ph="SELECT * FRO... users" />
@@ -1084,12 +1086,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1484627853234" expanded="true" signature="1073:1118" ph="SELECT * FRO... users" />
-            <marker date="1484627853234" expanded="true" signature="1355:1392" ph="SELECT * FRO... orders" />
-            <marker date="1484627853234" expanded="true" signature="1355:1407" ph="SELECT * FRO... orders" />
-            <marker date="1484627853234" expanded="true" signature="1355:1408" ph="INSERT INTO orders... " />
-            <marker date="1484627853234" expanded="true" signature="1585:1645" ph="SELECT * FRO... equipments" />
+            <marker date="1485104585917" expanded="true" signature="1073:1118" ph="SELECT * FRO... users" />
+            <marker date="1485104585917" expanded="true" signature="1355:1392" ph="SELECT * FRO... orders" />
+            <marker date="1485104585917" expanded="true" signature="1355:1407" ph="SELECT * FRO... orders" />
+            <marker date="1485104585917" expanded="true" signature="1355:1408" ph="INSERT INTO orders... " />
+            <marker date="1485104585917" expanded="true" signature="1585:1645" ph="SELECT * FRO... equipments" />
           </folding>
         </state>
       </provider>
@@ -1125,39 +1126,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/AddEquipment.java" />
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/WrongRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/8148c323/f9fddeb5-7f19-467a-abb8-e7e401e5844a/sport_equipment_db.users" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f9fddeb5-7f19-467a-abb8-e7e401e5844a/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/CommandName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/CommandProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1175,129 +1148,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/Register.java">
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/service/exception/ServiceException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="39" column="5" selection-start-line="10" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+        <state relative-caret-position="221">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/RentEquipment.java">
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/bean/Category.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        <state relative-caret-position="102">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/SignIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/service/ShopService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/GetRentRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/service/impl/ShopServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/bean/Equipment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="20" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/impl/SQLEquipmentDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/bean/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1484627853234" expanded="true" signature="1073:1118" ph="SELECT * FRO... users" />
-            <marker date="1484627853234" expanded="true" signature="1355:1392" ph="SELECT * FRO... orders" />
-            <marker date="1484627853234" expanded="true" signature="1355:1407" ph="SELECT * FRO... orders" />
-            <marker date="1484627853234" expanded="true" signature="1355:1408" ph="INSERT INTO orders... " />
-            <marker date="1484627853234" expanded="true" signature="1585:1645" ph="SELECT * FRO... equipments" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/bean/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/exception/DAOException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#171#172#0" expanded="false" />
-            <element signature="e#194#195#0" expanded="false" />
-            <element signature="e#236#237#0" expanded="false" />
-            <element signature="e#266#267#0" expanded="false" />
-            <element signature="e#384#385#0" expanded="false" />
-            <element signature="e#417#418#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/view/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/exception/CommandException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
-          <folding />
+        <state relative-caret-position="187">
+          <caret line="17" column="81" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/WrongRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/GetRentRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/RentEquipment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="75" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/impl/SignIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="17" column="74" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/command/CommandName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="63" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/CommandProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="300">
+          <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/service/exception/ServiceException.java">
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/factory/DAOFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/EquipmentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="289">
+          <caret line="20" column="70" selection-start-line="9" selection-start-column="4" selection-end-line="20" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/impl/SQLUserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1484626842686" expanded="true" signature="814:848" ph="SELECT * FRO... users" />
             <marker date="1484626842686" expanded="true" signature="814:849" ph="SELECT * FRO... users" />
             <marker date="1484626842686" expanded="true" signature="814:850" ph="SELECT * FRO... users" />
@@ -1312,10 +1292,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/factory/DAOFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="70" selection-start-line="9" selection-start-column="4" selection-end-line="20" selection-end-column="70" />
+        <state relative-caret-position="119">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1332,53 +1312,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/service/ClientService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/service/impl/ClientServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/bean/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/bean/Equipment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/bean/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        <state relative-caret-position="153">
+          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/bean/User.java">
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/service/impl/ShopServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="14" column="67" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/service/ShopService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/service/ClientService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/view/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/impl/SQLEquipmentDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+          <folding>
+            <marker date="1485104585917" expanded="true" signature="1073:1118" ph="SELECT * FRO... users" />
+            <marker date="1485104585917" expanded="true" signature="1355:1392" ph="SELECT * FRO... orders" />
+            <marker date="1485104585917" expanded="true" signature="1355:1407" ph="SELECT * FRO... orders" />
+            <marker date="1485104585917" expanded="true" signature="1355:1408" ph="INSERT INTO orders... " />
+            <marker date="1485104585917" expanded="true" signature="1585:1645" ph="SELECT * FRO... equipments" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/tc/sport_equipment/dao/EquipmentDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

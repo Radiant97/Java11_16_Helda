@@ -23,11 +23,6 @@ public class Order implements Serializable{
         this.equipments = equipments;
     }
 
-    public Order(User user, List<Equipment> equipments) {
-        this.user = user;
-        this.equipments = equipments;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

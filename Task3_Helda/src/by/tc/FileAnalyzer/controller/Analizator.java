@@ -8,7 +8,7 @@ import by.tc.FileAnalyzer.service.factory.ServiceFactory;
 import java.util.logging.Logger;
 
 public final class Analizator{
-    private Logger log = Logger.getLogger(Analizator.class.getName());
+    private static final Logger log = Logger.getLogger(Analizator.class.getName());
 
     public void setFile(String filePath){
         try{

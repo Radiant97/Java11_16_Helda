@@ -60,20 +60,20 @@ public class FileServiceImpl implements FileService{
     }
 
     private NodeInfo nextProcess(){
-        int tagMatchStartPosition;
-        int contentMatchStartPosition = buffer.length();
-        int tagMatchEndPosition;
-        int contentMatchEndPosition = buffer.length();
+        int tagStartPosition;
+        int contentStartPosition = buffer.length();
+        int tagEndPosition;
+        int contentEndPosition = buffer.length();
 
-        tagMatchStartPosition = tagMatcher.start();
-        tagMatchEndPosition = tagMatcher.end();
+        tagStartPosition = tagMatcher.start();
+        tagEndPosition = tagMatcher.end();
         if (contentMatcher.find()) {
-            contentMatchStartPosition = contentMatcher.start();
-            contentMatchEndPosition = contentMatcher.end();
+            contentStartPosition = contentMatcher.start();
+            contentEndPosition = contentMatcher.end();
         }
-        if (tagMatchStartPosition < contentMatchStartPosition) {
-            String tag = buffer.substring(tagMatchStartPosition, tagMatchEndPosition);
-            buffer.delete(0, tagMatchEndPosition - 1);
+        if (tagStartPosition < contentStartPosition) {
+            String tag = buffer.substring(tagStartPosition, tagEndPosition);
+            buffer.delete(0, tagEndPosition - 1);
             contentMatcher.reset();
             tagMatcher.reset();
 
@@ -81,8 +81,8 @@ public class FileServiceImpl implements FileService{
             return node;
 
         } else {
-            String content = buffer.substring(contentMatchStartPosition + 1, contentMatchEndPosition - 1);
-            buffer.delete(0, contentMatchEndPosition - 1);
+            String content = buffer.substring(contentStartPosition + 1, contentEndPosition - 1);
+            buffer.delete(0, contentEndPosition - 1);
             tagMatcher.reset();
             contentMatcher.reset();
 
@@ -112,7 +112,7 @@ public class FileServiceImpl implements FileService{
 
         } else {
             node.setType(NodeType.TAG_CONTENTS);
-            node.setContent(tag);
+            node.setContent(tagContent);
         }
         return node;
     }

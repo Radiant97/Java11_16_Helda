@@ -9,12 +9,6 @@ public class Equipment implements Serializable{
 
     public  Equipment(){}
 
-    public Equipment(String title, int price, Category category){
-        this.title = title;
-        this.price = price;
-        this.category = category;
-    }
-
     public String getTitle() {
         return title;
     }

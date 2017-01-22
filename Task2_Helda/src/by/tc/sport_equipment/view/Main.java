@@ -1,12 +1,6 @@
 package by.tc.sport_equipment.view;
 
-
-import by.tc.sport_equipment.bean.Category;
-import by.tc.sport_equipment.bean.User;
 import by.tc.sport_equipment.controller.Controller;
-import by.tc.sport_equipment.dao.exception.DAOException;
-import by.tc.sport_equipment.dao.impl.SQLEquipmentDAO;
-import by.tc.sport_equipment.dao.impl.SQLUserDAO;
 
 public class Main {
     public static void main(String[] args) {
