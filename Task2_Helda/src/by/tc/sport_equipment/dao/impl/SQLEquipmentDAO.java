@@ -32,7 +32,8 @@ public class SQLEquipmentDAO implements EquipmentDAO {
             st = con.createStatement();
             String password = user.getPassword();
 
-            rs = st.executeQuery("SELECT * FROM users WHERE `login`=`"+login+"`");
+            rs = st.executeQuery("SELECT * FROM users WHERE `login`=`"+login+"`");// ой, а про PreparedStatement я вам не рассказывала
+            // и не рассказывала, для чего он применяется
             rs.next();
 
             if (rs.getString(3) != password){
@@ -64,11 +65,13 @@ public class SQLEquipmentDAO implements EquipmentDAO {
         }
         finally{
             try {
-                if (rs != null) { rs.close(); }
+                if (rs != null) { rs.close(); }// закрывать ресурсы надо каждый в своем блоке
+                // иначе есть шанс что-нибудь не закрыть
                 if (st != null) { st.close(); }
                 if (con != null) { con.close(); }
             } catch (SQLException e) {
-                throw new DAOException("Closing database connection error.", e);
+                throw new DAOException("Closing database connection error.", e);// и блок finally крайне редко выбрасывает исключение
+                // и уж точно не в этом случае
             }
         }
     }
