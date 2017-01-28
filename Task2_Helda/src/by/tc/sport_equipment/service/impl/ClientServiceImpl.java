@@ -29,7 +29,9 @@ public class ClientServiceImpl implements ClientService {
         String login = user.getLogin();
         if (login == null || login.isEmpty()){
             throw new ServiceException("Incorrect login.");
-        }
+        }// проверка на валидность - это все-таки проверка на валидность
+        // а ты при регистрации только логин проверяешь
+        // а что в остальными параметрами?
         DAOFactory daoFactory = DAOFactory.getInstance();
         UserDAO userDAO = daoFactory.getUserDAO();
         try{
