@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 
 public final class Controller {
     private final CommandProvider provider = new CommandProvider();
-    final static Logger logger = Logger.getLogger(Controller.class.getName());
+    final static Logger logger = Logger.getLogger(Controller.class.getName());// где потеряла атрибут доступа?
 
     private final char paramDelimiter = ' ';
 
@@ -25,7 +25,7 @@ public final class Controller {
             response = executionCommand.execute(parameters);
         } catch (CommandException e){
             response = "WrongRequest.";
-            logger.info(e.getMessage());
+            logger.info(e.getMessage());// логгируем исключение целиком, иначе лог станет бессмысленным и ничем нам не поможет
         }
 
         return response;
