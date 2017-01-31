@@ -45,18 +45,11 @@ public class SQLEquipmentDAO implements EquipmentDAO {
             ResultSet rsEquipment;
             while (rs.next()){
                 rsEquipment = st.executeQuery("SELECT * FROM `equipments` WHERE `id`=`" + rs.getInt(1) + "`;");
-
-                Equipment eq = new Equipment();
-                eq.setCategory(Category.valueOf(rsEquipment.getString(4).toUpperCase()));
-                eq.setTitle(rsEquipment.getString(2));
-                eq.setPrice(rsEquipment.getInt(3));
-
+                Equipment eq = new Equipment(rsEquipment.getString(2), rsEquipment.getInt(3), Category.valueOf(rsEquipment.getString(4).toUpperCase()));
                 equipments.add(eq);
             }
 
-            order = new Order();
-            order.setEquipments(equipments);
-            order.setUser(user);
+            order = new Order(user, equipments);
             return order;
         }
         catch (SQLException e){
