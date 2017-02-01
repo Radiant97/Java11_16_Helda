@@ -19,10 +19,7 @@ public class ShopServiceImpl implements ShopService{
         if (login == null || login.isEmpty()){
             throw new ServiceException("Incorrect login.");
         }
-        String password = user.getPassword();
-        if (password == null || password.isEmpty()){
-            throw new ServiceException("Incorrect password.");
-        }
+
         DAOFactory daoFactory = DAOFactory.getInstance();
         EquipmentDAO equipmentDAO = daoFactory.getEquipmentDAO();
         try {
