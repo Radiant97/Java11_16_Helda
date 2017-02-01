@@ -63,13 +63,10 @@ public class SQLEquipmentDAO implements EquipmentDAO {
             throw new DAOException("Error during renting process.", e);
         }
         finally{
-            try {
-                if (rs != null) { rs.close(); }
-                if (st != null) { st.close(); }
-                if (con != null) { con.close(); }
-            } catch (SQLException e) {
-                throw new DAOException("Closing database connection error.", e);
-            }
+            try { if (rs != null) { rs.close(); } }catch (SQLException e){ e.printStackTrace();};
+            try {if (st != null) { st.close(); } }catch (SQLException e){ e.printStackTrace();};
+            try {if (con != null) { con.close(); } }catch (SQLException e){ e.printStackTrace();};
+
         }
     }
 }

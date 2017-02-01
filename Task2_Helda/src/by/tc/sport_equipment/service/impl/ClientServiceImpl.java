@@ -15,6 +15,10 @@ public class ClientServiceImpl implements ClientService {
         if (login == null || login.isEmpty()){
             throw new ServiceException("Incorrect login");
         }
+        if (password == null || password.isEmpty()){
+            throw new ServiceException("Incorrect password");
+        }
+
         DAOFactory daoFactory = DAOFactory.getInstance();
         UserDAO userDAO = daoFactory.getUserDAO();
         try {
@@ -27,8 +31,12 @@ public class ClientServiceImpl implements ClientService {
     @Override
     public void registration(User user) throws ServiceException {
         String login = user.getLogin();
+        String password = user.getPassword();
         if (login == null || login.isEmpty()){
             throw new ServiceException("Incorrect login.");
+        }
+        if (password == null || password.isEmpty()){
+            throw new ServiceException("Incorrect password");
         }
         DAOFactory daoFactory = DAOFactory.getInstance();
         UserDAO userDAO = daoFactory.getUserDAO();
@@ -42,8 +50,12 @@ public class ClientServiceImpl implements ClientService {
     @Override
     public void rentEquipment(User user, Equipment equipment) throws ServiceException {
         String login = user.getLogin();
+        String password = user.getPassword();
         if (login == null || login.isEmpty()){
             throw new ServiceException("Incorrect login.");
+        }
+        if (password == null || password.isEmpty()){
+            throw new ServiceException("Incorrect password");
         }
 
         if (equipment.getCategory() == null){ throw new ServiceException("Incorrect equipment category");}
