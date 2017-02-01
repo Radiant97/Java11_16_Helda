@@ -1,17 +1,13 @@
 package by.tc.sport_equipment.bean;
 
-public class Equipment {
+import java.io.Serializable;
+
+public class Equipment implements Serializable{
     private String title;
     private int price;
     private Category category;
 
     public  Equipment(){}
-
-    public Equipment(String title, int price, Category category){
-        this.title = title;
-        this.price = price;
-        this.category = category;
-    }
 
     public String getTitle() {
         return title;
@@ -35,5 +31,35 @@ public class Equipment {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    @Override
+    public String toString() {
+        return "Equipment{" +
+                "title='" + title + '\'' +
+                ", price=" + price +
+                ", category=" + category +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Equipment equipment = (Equipment) o;
+
+        if (price != equipment.price) return false;
+        if (!title.equals(equipment.title)) return false;
+        return category == equipment.category;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = title.hashCode();
+        result = 31 * result + price;
+        result = 31 * result + category.hashCode();
+        return result;
     }
 }

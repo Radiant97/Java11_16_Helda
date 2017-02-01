@@ -1,5 +1,7 @@
 package by.tc.sport_equipment.controller.command;
 
+import by.tc.sport_equipment.controller.command.exception.CommandException;
+
 public interface Command {
-    public String execute(String request);
+    String execute(String parameters) throws CommandException;
 }

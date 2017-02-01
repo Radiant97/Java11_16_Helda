@@ -3,29 +3,30 @@ package by.tc.sport_equipment.controller.command.impl;
 import by.tc.sport_equipment.bean.Order;
 import by.tc.sport_equipment.bean.User;
 import by.tc.sport_equipment.controller.command.Command;
+import by.tc.sport_equipment.controller.command.exception.CommandException;
 import by.tc.sport_equipment.service.ClientService;
 import by.tc.sport_equipment.service.ShopService;
 import by.tc.sport_equipment.service.exception.ServiceException;
 import by.tc.sport_equipment.service.factory.ServiceFactory;
 
 public class GetRentRecord implements Command {
-    private final char paramDelimeter = ' ';
+    private final String parametersDelimeter = ",";
     private final int loginNum = 0;
     private final int passwordNum = 1;
 
     @Override
-    public String execute(String request) {
+    public String execute(String parameters) throws CommandException{
         User user;
+        String response;
 
-        String response = null;
+        String[] splittedParameters = parameters.split(parametersDelimeter);
 
-        String paramsStr = request.substring(request.indexOf(paramDelimeter) + 1, request.length());
-        String[] params = paramsStr.split(",");
+        String login = splittedParameters[loginNum].trim();
+        String password = splittedParameters[passwordNum].trim();
 
-        String login = params[loginNum].trim();
-        String password = params[passwordNum].trim();
-
-        user = new User(login, password);
+        user = new User();
+        user.setPassword(password);
+        user.setLogin(login);
 
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         ShopService shopService = serviceFactory.getShopService();
@@ -33,8 +34,7 @@ public class GetRentRecord implements Command {
             Order order = shopService.getRentReport(user);
             response = "Rent Record: " + order.toString();
         } catch (ServiceException e) {
-            // write log
-            response = "Error during getting rent record procedure.";
+            throw new CommandException(e);
         }
 
         return response;

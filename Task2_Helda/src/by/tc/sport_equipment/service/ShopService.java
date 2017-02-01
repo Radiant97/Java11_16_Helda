@@ -9,5 +9,4 @@ import java.util.List;
 
 public interface ShopService {
     Order getRentReport(User user) throws ServiceException;
-    //List<Equipment> getStockRepoct() throws ServiceException;
 }
