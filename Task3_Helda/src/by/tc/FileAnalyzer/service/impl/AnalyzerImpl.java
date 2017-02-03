@@ -9,11 +9,12 @@ import by.tc.FileAnalyzer.service.Analyzer;
 import by.tc.FileAnalyzer.service.exception.ServiceException;
 
 import java.io.BufferedReader;
+import java.io.Closeable;
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class AnalyzerImpl implements Analyzer{
+public class AnalyzerImpl implements Analyzer, Closeable{
     private StringBuilder tagBuffer;
     private final static String BUFF_INITIALIZER = "";
 
@@ -69,6 +70,12 @@ public class AnalyzerImpl implements Analyzer{
         if (!readXMLFileWhileNotMatch(tagMatcher)) { return null; }
         NodeInfo node = nextProcess();
         return node;
+    }
+
+
+    @Override
+    public void close() throws IOException {
+        xmlFile.close();
     }
 
     private void skipXMLDeclaration() throws ServiceException{
