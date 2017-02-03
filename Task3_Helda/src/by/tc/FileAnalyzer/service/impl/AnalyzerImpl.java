@@ -19,7 +19,7 @@ public class AnalyzerImpl implements Analyzer{
 
     private final static String TAG_REG_EX = "<([^>]|\n)+>";
     private final static String CONTENT_REG_EX = ">[^<\n]+<";
-    private final static String XML_DECLARATION = "<?([^>])+?>";
+    private final static String XML_DECLARATION_REG_EX= "<?([^>])+?>";
 
     private final static String NO_BODY_TAG_SIGN = "/>";
     private final static String CLOSING_TAG_SIGN = "</";
@@ -39,7 +39,7 @@ public class AnalyzerImpl implements Analyzer{
 
         tagPattern = Pattern.compile(TAG_REG_EX);
         contentPattern = Pattern.compile(CONTENT_REG_EX);
-        xmlDeclarationPattern = Pattern.compile(XML_DECLARATION);
+        xmlDeclarationPattern = Pattern.compile(XML_DECLARATION_REG_EX);
         tagMatcher = tagPattern.matcher(tagBuffer);
         contentMatcher = contentPattern.matcher(tagBuffer);
         xmlDeclarationMatcher = xmlDeclarationPattern.matcher(tagBuffer);
