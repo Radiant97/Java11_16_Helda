@@ -8,7 +8,6 @@ import by.tc.FileAnalyzer.dao.factory.DAOFactory;
 import by.tc.FileAnalyzer.service.Analyzer;
 import by.tc.FileAnalyzer.service.exception.ServiceException;
 
-import java.io.BufferedReader;
 import java.io.Closeable;
 import java.io.IOException;
 import java.util.regex.Matcher;
@@ -20,7 +19,7 @@ public class AnalyzerImpl implements Analyzer, Closeable{
 
     private final static String TAG_REG_EX = "<([^>]|\n)+>";
     private final static String CONTENT_REG_EX = ">[^<\n]+<";
-    private final static String XML_DECLARATION_REG_EX= "<?([^>])+?>";
+    private final static String XML_DECLARATION = "<?([^>])+?>";
 
     private final static String NO_BODY_TAG_SIGN = "/>";
     private final static String CLOSING_TAG_SIGN = "</";
@@ -33,14 +32,14 @@ public class AnalyzerImpl implements Analyzer, Closeable{
     private Matcher contentMatcher;
     private Matcher xmlDeclarationMatcher;
 
-    private BufferedReader xmlFile;
+    private FileDAO fileDAO;
 
     public AnalyzerImpl(){
         tagBuffer = new StringBuilder(BUFF_INITIALIZER);
 
         tagPattern = Pattern.compile(TAG_REG_EX);
         contentPattern = Pattern.compile(CONTENT_REG_EX);
-        xmlDeclarationPattern = Pattern.compile(XML_DECLARATION_REG_EX);
+        xmlDeclarationPattern = Pattern.compile(XML_DECLARATION);
         tagMatcher = tagPattern.matcher(tagBuffer);
         contentMatcher = contentPattern.matcher(tagBuffer);
         xmlDeclarationMatcher = xmlDeclarationPattern.matcher(tagBuffer);
@@ -56,9 +55,9 @@ public class AnalyzerImpl implements Analyzer, Closeable{
         tagBuffer.setLength(0);
 
         DAOFactory daoFactory = DAOFactory.getInstance();
-        FileDAO fileDAO = daoFactory.getFileDAO();
+        fileDAO = daoFactory.getFileDAO();
         try {
-            xmlFile = fileDAO.openFile(filePath);
+            fileDAO.openFile(filePath);
             skipXMLDeclaration();
         } catch (DAOException e) {
             throw new ServiceException("Error during opening file process.");
@@ -72,10 +71,9 @@ public class AnalyzerImpl implements Analyzer, Closeable{
         return node;
     }
 
-
     @Override
     public void close() throws IOException {
-        xmlFile.close();
+        fileDAO.close();
     }
 
     private void skipXMLDeclaration() throws ServiceException{
@@ -94,14 +92,14 @@ public class AnalyzerImpl implements Analyzer, Closeable{
     private boolean readXMLFile() throws ServiceException{
         boolean result;
         try {
-            String line = xmlFile.readLine();
+            String line = fileDAO.read();
             if (line != null) {
                 tagBuffer.append(line);
                 result = true;
             } else {
                 result = false;
             }
-        } catch (IOException e) {
+        } catch (DAOException e) {
             throw  new ServiceException("Error during reading xml file.");
         }
         return result;
