@@ -1,16 +1,16 @@
 package by.tc.FileAnalyzer.service.factory;
 
-import by.tc.FileAnalyzer.service.FileService;
-import by.tc.FileAnalyzer.service.impl.FileServiceImpl;
+import by.tc.FileAnalyzer.service.Analyzer;
+import by.tc.FileAnalyzer.service.impl.AnalyzerImpl;
 
 public final class ServiceFactory {
     private static final ServiceFactory instance = new ServiceFactory();
 
-    private final FileService fileService = new FileServiceImpl();
+    private final Analyzer analyzer = new AnalyzerImpl();
 
     private ServiceFactory(){}
 
     public static ServiceFactory getInstance() { return instance; }
 
-    public FileService getFileService() { return fileService; }
+    public Analyzer getAnalyzer() { return analyzer; }
 }
