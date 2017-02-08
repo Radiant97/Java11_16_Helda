@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DomWebParser implements Parser{
+    private static final String WEB_APP_ATTR_ID = "id";
+    private static final String WEB_APP_ATTR_VERSION = "version";
 
     @Override
     public WebApp parse(String filePath) throws ServiceException {
@@ -36,8 +38,8 @@ public class DomWebParser implements Parser{
         Element root = document.getDocumentElement();
 
         WebApp webApp = new WebApp();
-        webApp.setId(root.getAttribute("id"));
-        webApp.setVersion(root.getAttribute("version"));
+        webApp.setId(root.getAttribute(WEB_APP_ATTR_ID));
+        webApp.setVersion(root.getAttribute(WEB_APP_ATTR_VERSION));
 
         settingProcess(webApp, root);
 
@@ -62,19 +64,19 @@ public class DomWebParser implements Parser{
 
     private void welcomeFileListSettingProcess(WebApp webApp, Element root){
         WelcomeFileList welcomeFileList;
-        NodeList welcomeFileNode = root.getElementsByTagName("welcome-file-list");
+        NodeList welcomeFileNode = root.getElementsByTagName(WebTagName.WELCOME_FILE_LIST.toString());
         List<String> welcomeFiles = new ArrayList<>();
 
         for (int i = 0; i < welcomeFileNode.getLength(); i++) {
             welcomeFileList = new WelcomeFileList();
             Element welcomeFileListElement = (Element) welcomeFileNode.item(i);
 
-            List<Element> elements = getChildren(welcomeFileListElement,"welcome-file");
+            List<Element> elements = getChildren(welcomeFileListElement,WebTagName.WELCOME_FILE.toString());
             for (Element e : elements){
                 welcomeFiles.add(e.getTextContent().trim());
             }
             welcomeFileList.setWelcomeFile(welcomeFiles);
-            webApp.getWelcomeFileList().add(welcomeFileList);
+            webApp.getWelcomeFiles().add(welcomeFileList);
         }
     }
 
@@ -91,113 +93,113 @@ public class DomWebParser implements Parser{
 
     private void filterSettingProcess(WebApp webApp, Element root){
         Filter filter;
-        NodeList filterNodeList = root.getElementsByTagName("filter");
+        NodeList filterNodeList = root.getElementsByTagName(WebTagName.FILTER.toString());
 
         for (int i = 0; i < filterNodeList.getLength(); i++) {
             filter = new Filter();
             Element element = (Element) filterNodeList.item(i);
-            filter.setFilterName(getSingleChild(element,"filter-name").getTextContent().trim());
-            filter.setFilterClass(getSingleChild(element,"filter-class").getTextContent().trim());
+            filter.setFilterName(getSingleChild(element,WebTagName.FILTER_NAME.toString()).getTextContent().trim());
+            filter.setFilterClass(getSingleChild(element,WebTagName.FILTER_CLASS.toString()).getTextContent().trim());
 
             filter.setInitParams(getInitParamList(element));
-            webApp.getFilterList().add(filter);
+            webApp.getFilters().add(filter);
         }
     }
 
     private void filterMappingSettingProcess(WebApp webApp, Element root){
         FilterMapping filterMapping;
-        NodeList filterMappingNode = root.getElementsByTagName("filter-mapping");
+        NodeList filterMappingNode = root.getElementsByTagName(WebTagName.FILTER_MAPPING.toString());
 
         for (int i = 0 ; i < filterMappingNode.getLength(); i++) {
             filterMapping = new FilterMapping();
             Element element = (Element) filterMappingNode.item(i);
-            filterMapping.setFilterName(getSingleChild(element,"filter-name").getTextContent().trim());
-            filterMapping.setUrlPattern(getSingleChild(element,"url-pattern").getTextContent().trim());
-            filterMapping.setDispatcher(getSingleChild(element,"dispatcher").getTextContent().trim());
+            filterMapping.setFilterName(getSingleChild(element, WebTagName.FILTER_NAME.toString()).getTextContent().trim());
+            filterMapping.setUrlPattern(getSingleChild(element, WebTagName.URL_PATTERN.toString()).getTextContent().trim());
+            filterMapping.setDispatcher(getSingleChild(element, WebTagName.DISPATCHER.toString()).getTextContent().trim());
 
-            webApp.getFilterMappingList().add(filterMapping);
+            webApp.getFilterMappings().add(filterMapping);
         }
     }
 
     private void listenerSettingProcess(WebApp webApp, Element root){
         Listener listener;
-        NodeList listenerNode = root.getElementsByTagName("listener");
+        NodeList listenerNode = root.getElementsByTagName(WebTagName.LISTENER.toString());
 
         for (int i = 0; i < listenerNode.getLength(); i++) {
             listener = new Listener();
             Element element = (Element) listenerNode.item(i);
-            listener.setListenerClass(getSingleChild(element,"listener-class").getTextContent().trim());
-            webApp.getListenerList().add(listener);
+            listener.setListenerClass(getSingleChild(element, WebTagName.LISTENER_CLASS.toString()).getTextContent().trim());
+            webApp.getListeners().add(listener);
         }
     }
 
     private void servletSettingProcess(WebApp webApp, Element root){
         Servlet servlet;
-        NodeList servletNode = root.getElementsByTagName("servlet");
+        NodeList servletNode = root.getElementsByTagName(WebTagName.SERVLET.toString());
 
         for (int i = 0; i < servletNode.getLength(); i++) {
             servlet = new Servlet();
             Element element = (Element) servletNode.item(i);
-            servlet.setServletName(getSingleChild(element,"servlet-name").getTextContent().trim());
-            servlet.setServletClass(getSingleChild(element,"servlet-class").getTextContent().trim());
+            servlet.setServletName(getSingleChild(element, WebTagName.SERVLET_NAME.toString()).getTextContent().trim());
+            servlet.setServletClass(getSingleChild(element, WebTagName.SERVLET_CLASS.toString()).getTextContent().trim());
 
             servlet.setInitParams(getInitParamList(element));
-            webApp.getServletList().add(servlet);
+            webApp.getServlets().add(servlet);
         }
     }
 
     private void servletMappingSettingProcess(WebApp webApp, Element root){
         ServletMapping servletMapping;
-        NodeList servletNode = root.getElementsByTagName("servlet-mapping");
+        NodeList servletNode = root.getElementsByTagName(WebTagName.SERVLET_MAPPING.toString());
 
         for (int i = 0; i < servletNode.getLength(); i++) {
             servletMapping = new ServletMapping();
             Element element = (Element) servletNode.item(i);
-            servletMapping.setServletName(getSingleChild(element,"servlet-name").getTextContent().trim());
-            servletMapping.setUrlPattern(getSingleChild(element,"url-pattern").getTextContent().trim());
+            servletMapping.setServletName(getSingleChild(element, WebTagName.SERVLET_NAME.toString()).getTextContent().trim());
+            servletMapping.setUrlPattern(getSingleChild(element, WebTagName.URL_PATTERN.toString()).getTextContent().trim());
 
-            webApp.getServletMappingList().add(servletMapping);
+            webApp.getServletMappings().add(servletMapping);
         }
     }
 
     private void errorPageSettingProcess(WebApp webApp, Element root){
         ErrorPage errorPage;
-        NodeList errorPageNode = root.getElementsByTagName("error-page");
+        NodeList errorPageNode = root.getElementsByTagName(WebTagName.ERROR_PAGE.toString());
 
         for (int i = 0; i < errorPageNode.getLength(); i++) {
             errorPage = new ErrorPage();
             Element errorPageElement = (Element) errorPageNode.item(i);
-            Element exceptionTypeElement = getSingleChild(errorPageElement,"exception-type");
+            Element exceptionTypeElement = getSingleChild(errorPageElement, WebTagName.EXCEPTION_TYPE.toString());
             if (exceptionTypeElement != null){
                 errorPage.setExceptionType(exceptionTypeElement.getTextContent().trim());
             }else {
-                errorPage.setErrorCode(Integer.parseInt(getSingleChild(errorPageElement,"error-code").getTextContent().trim()));
+                errorPage.setErrorCode(Integer.parseInt(getSingleChild(errorPageElement, WebTagName.ERROR_CODE.toString()).getTextContent().trim()));
             }
-            errorPage.setLocation(getSingleChild(errorPageElement,"location").getTextContent().trim());
-            webApp.getErrorPageList().add(errorPage);
+            errorPage.setLocation(getSingleChild(errorPageElement, WebTagName.LOCATION.toString()).getTextContent().trim());
+            webApp.getErrorPages().add(errorPage);
         }
     }
 
     private void displayNameSettingProcess(WebApp webApp, Element root){
         DisplayName displayName;
-        NodeList displayNameNode = root.getElementsByTagName("display-name");
+        NodeList displayNameNode = root.getElementsByTagName(WebTagName.DISPLAY_NAME.toString());
 
         for (int i = 0; i < displayNameNode.getLength(); i++) {
             displayName = new DisplayName();
             Element element = (Element) displayNameNode.item(i);
             displayName.setDescription(element.getTextContent().trim());
-            webApp.getDisplayNameList().add(displayName);
+            webApp.getDisplayNames().add(displayName);
         }
     }
 
     private List<InitParam> getInitParamList(Element parentElement){
         List<InitParam> initParams = new ArrayList<>();
-        List<Element> elements = getChildren(parentElement,"init-param");
+        List<Element> elements = getChildren(parentElement, WebTagName.INIT_PARAM.toString());
 
         for (Element e : elements){
             InitParam initParam = new InitParam();
-            initParam.setParamName(getSingleChild(e,"param-name").getTextContent().trim());
-            initParam.setParamValue(getSingleChild(e,"param-value").getTextContent().trim());
+            initParam.setParamName(getSingleChild(e, WebTagName.PARAM_NAME.toString()).getTextContent().trim());
+            initParam.setParamValue(getSingleChild(e, WebTagName.PARAM_VALUE.toString()).getTextContent().trim());
             initParams.add(initParam);
         }
         return initParams;

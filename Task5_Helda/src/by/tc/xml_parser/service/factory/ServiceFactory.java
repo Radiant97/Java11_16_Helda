@@ -2,6 +2,8 @@ package by.tc.xml_parser.service.factory;
 
 import by.tc.xml_parser.service.Parser;
 import by.tc.xml_parser.service.impl.dom.DomWebParser;
+import by.tc.xml_parser.service.impl.sax.SaxWebParser;
+import by.tc.xml_parser.service.impl.stax.StaxWebParser;
 
 public class ServiceFactory {
     private static final ServiceFactory instance=new ServiceFactory();

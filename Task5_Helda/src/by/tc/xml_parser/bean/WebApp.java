@@ -6,80 +6,80 @@ import java.util.List;
 public class WebApp implements Serializable {
     private static final long serialVersionUID=1L;
 
-    private List<WelcomeFileList> welcomeFileList;
-    private List<Filter> filterList;
-    private List<FilterMapping> filterMappingList;
-    private List<Listener> listenerList;
-    private List<Servlet> servletList;
-    private List<ServletMapping> servletMappingList;
-    private List<ErrorPage> errorPageList;
-    private List<DisplayName> displayNameList;
+    private List<WelcomeFileList> welcomeFiles;
+    private List<Filter> filters;
+    private List<FilterMapping> filterMappings;
+    private List<Listener> listeners;
+    private List<Servlet> servlets;
+    private List<ServletMapping> servletMappings;
+    private List<ErrorPage> errorPages;
+    private List<DisplayName> displayNames;
 
     private String id;
     private String version;
 
-    public List<WelcomeFileList> getWelcomeFileList() {
-        return welcomeFileList;
+    public List<WelcomeFileList> getWelcomeFiles() {
+        return welcomeFiles;
     }
 
-    public void setWelcomeFileList(List<WelcomeFileList> welcomeFileList) {
-        this.welcomeFileList = welcomeFileList;
+    public void setWelcomeFiles(List<WelcomeFileList> welcomeFiles) {
+        this.welcomeFiles = welcomeFiles;
     }
 
-    public List<Filter> getFilterList() {
-        return filterList;
+    public List<Filter> getFilters() {
+        return filters;
     }
 
-    public void setFilterList(List<Filter> filterList) {
-        this.filterList = filterList;
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
     }
 
-    public List<FilterMapping> getFilterMappingList() {
-        return filterMappingList;
+    public List<FilterMapping> getFilterMappings() {
+        return filterMappings;
     }
 
-    public void setFilterMappingList(List<FilterMapping> filterMappingList) {
-        this.filterMappingList = filterMappingList;
+    public void setFilterMappings(List<FilterMapping> filterMappings) {
+        this.filterMappings = filterMappings;
     }
 
-    public List<Listener> getListenerList() {
-        return listenerList;
+    public List<Listener> getListeners() {
+        return listeners;
     }
 
-    public void setListenerList(List<Listener> listenerList) {
-        this.listenerList = listenerList;
+    public void setListeners(List<Listener> listeners) {
+        this.listeners = listeners;
     }
 
-    public List<Servlet> getServletList() {
-        return servletList;
+    public List<Servlet> getServlets() {
+        return servlets;
     }
 
-    public void setServletList(List<Servlet> servletList) {
-        this.servletList = servletList;
+    public void setServlets(List<Servlet> servlets) {
+        this.servlets = servlets;
     }
 
-    public List<ServletMapping> getServletMappingList() {
-        return servletMappingList;
+    public List<ServletMapping> getServletMappings() {
+        return servletMappings;
     }
 
-    public void setServletMappingList(List<ServletMapping> servletMappingList) {
-        this.servletMappingList = servletMappingList;
+    public void setServletMappings(List<ServletMapping> servletMappings) {
+        this.servletMappings = servletMappings;
     }
 
-    public List<ErrorPage> getErrorPageList() {
-        return errorPageList;
+    public List<ErrorPage> getErrorPages() {
+        return errorPages;
     }
 
-    public void setErrorPageList(List<ErrorPage> errorPageList) {
-        this.errorPageList = errorPageList;
+    public void setErrorPages(List<ErrorPage> errorPages) {
+        this.errorPages = errorPages;
     }
 
-    public List<DisplayName> getDisplayNameList() {
-        return displayNameList;
+    public List<DisplayName> getDisplayNames() {
+        return displayNames;
     }
 
-    public void setDisplayNameList(List<DisplayName> displayNameList) {
-        this.displayNameList = displayNameList;
+    public void setDisplayNames(List<DisplayName> displayNames) {
+        this.displayNames = displayNames;
     }
 
     public String getId() {
@@ -105,19 +105,19 @@ public class WebApp implements Serializable {
 
         WebApp webApp = (WebApp) o;
 
-        if (welcomeFileList != null ? !welcomeFileList.equals(webApp.welcomeFileList) : webApp.welcomeFileList != null)
+        if (welcomeFiles != null ? !welcomeFiles.equals(webApp.welcomeFiles) : webApp.welcomeFiles != null)
             return false;
-        if (filterList != null ? !filterList.equals(webApp.filterList) : webApp.filterList != null) return false;
-        if (filterMappingList != null ? !filterMappingList.equals(webApp.filterMappingList) : webApp.filterMappingList != null)
+        if (filters != null ? !filters.equals(webApp.filters) : webApp.filters != null) return false;
+        if (filterMappings != null ? !filterMappings.equals(webApp.filterMappings) : webApp.filterMappings != null)
             return false;
-        if (listenerList != null ? !listenerList.equals(webApp.listenerList) : webApp.listenerList != null)
+        if (listeners != null ? !listeners.equals(webApp.listeners) : webApp.listeners != null)
             return false;
-        if (servletList != null ? !servletList.equals(webApp.servletList) : webApp.servletList != null) return false;
-        if (servletMappingList != null ? !servletMappingList.equals(webApp.servletMappingList) : webApp.servletMappingList != null)
+        if (servlets != null ? !servlets.equals(webApp.servlets) : webApp.servlets != null) return false;
+        if (servletMappings != null ? !servletMappings.equals(webApp.servletMappings) : webApp.servletMappings != null)
             return false;
-        if (errorPageList != null ? !errorPageList.equals(webApp.errorPageList) : webApp.errorPageList != null)
+        if (errorPages != null ? !errorPages.equals(webApp.errorPages) : webApp.errorPages != null)
             return false;
-        if (displayNameList != null ? !displayNameList.equals(webApp.displayNameList) : webApp.displayNameList != null)
+        if (displayNames != null ? !displayNames.equals(webApp.displayNames) : webApp.displayNames != null)
             return false;
         if (id != null ? !id.equals(webApp.id) : webApp.id != null) return false;
         return version != null ? version.equals(webApp.version) : webApp.version == null;
@@ -126,14 +126,14 @@ public class WebApp implements Serializable {
 
     @Override
     public int hashCode() {
-        int result = welcomeFileList != null ? welcomeFileList.hashCode() : 0;
-        result = 31 * result + (filterList != null ? filterList.hashCode() : 0);
-        result = 31 * result + (filterMappingList != null ? filterMappingList.hashCode() : 0);
-        result = 31 * result + (listenerList != null ? listenerList.hashCode() : 0);
-        result = 31 * result + (servletList != null ? servletList.hashCode() : 0);
-        result = 31 * result + (servletMappingList != null ? servletMappingList.hashCode() : 0);
-        result = 31 * result + (errorPageList != null ? errorPageList.hashCode() : 0);
-        result = 31 * result + (displayNameList != null ? displayNameList.hashCode() : 0);
+        int result = welcomeFiles != null ? welcomeFiles.hashCode() : 0;
+        result = 31 * result + (filters != null ? filters.hashCode() : 0);
+        result = 31 * result + (filterMappings != null ? filterMappings.hashCode() : 0);
+        result = 31 * result + (listeners != null ? listeners.hashCode() : 0);
+        result = 31 * result + (servlets != null ? servlets.hashCode() : 0);
+        result = 31 * result + (servletMappings != null ? servletMappings.hashCode() : 0);
+        result = 31 * result + (errorPages != null ? errorPages.hashCode() : 0);
+        result = 31 * result + (displayNames != null ? displayNames.hashCode() : 0);
         result = 31 * result + (id != null ? id.hashCode() : 0);
         result = 31 * result + (version != null ? version.hashCode() : 0);
         return result;
@@ -142,14 +142,14 @@ public class WebApp implements Serializable {
     @Override
     public String toString() {
         return "WebApp{" +
-                "welcomeFileList=" + welcomeFileList +
-                ", filterList=" + filterList +
-                ", filterMappingList=" + filterMappingList +
-                ", listenerList=" + listenerList +
-                ", servletList=" + servletList +
-                ", servletMappingList=" + servletMappingList +
-                ", errorPageList=" + errorPageList +
-                ", displayNameList=" + displayNameList +
+                "welcomeFiles=" + welcomeFiles +
+                ", filters=" + filters +
+                ", filterMappings=" + filterMappings +
+                ", listeners=" + listeners +
+                ", servlets=" + servlets +
+                ", servletMappings=" + servletMappings +
+                ", errorPages=" + errorPages +
+                ", displayNames=" + displayNames +
                 ", id='" + id + '\'' +
                 ", version='" + version + '\'' +
                 '}';
