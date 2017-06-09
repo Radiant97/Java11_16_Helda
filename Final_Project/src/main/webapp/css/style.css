@@ -1,0 +1,17 @@
+.question-list-item {
+  border: 2px solid grey;
+  box-shadow: 3px 3px 0 0 grey;
+}
+
+.answer-list-item {
+  border: 1px solid grey;
+  box-shadow: 3px 3px 0 0 grey;
+}
+#question-div {
+  border: 1px solid grey;
+  box-shadow: 3px 3px 0 0 grey;
+}
+#answers-list {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}

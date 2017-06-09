@@ -1,0 +1,21 @@
+package by.tc.like_it.controller.command.config;
+
+public enum CommandName {
+    SIGN_IN, SIGN_UP, SIGN_OUT,
+    REDIRECT_TO_MAIN_PAGE,
+    EDIT_USER,
+
+    INIT_SOURCE, DESTROY_SOURCE,
+
+    CHANGE_LOCALE,
+
+    ADD_QUESTION, EDIT_QUESTION,
+
+    ADD_ANSWER_JSON,
+
+    ADD_TAG, DELETE_TAG,
+
+    GET_TAGS_JSON, GET_QUESTIONS_JSON, GET_QUESTION_JSON,
+    GET_ANSWERS_JSON, GET_USER_JSON, BAN_USER
+
+}

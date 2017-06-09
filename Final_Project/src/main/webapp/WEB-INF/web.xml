@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>Like_IT</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>customtags</taglib-uri>
+            <taglib-location>/WEB-INF/tld/custom.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+    
+    <servlet>
+        <display-name>Controller</display-name>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>by.tc.like_it.controller.Controller</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/Controller</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Questions</servlet-name>
+        <jsp-file>/WEB-INF/jsp/questions.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Questions</servlet-name>
+        <url-pattern>/questions</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Question</servlet-name>
+        <jsp-file>/WEB-INF/jsp/question.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Question</servlet-name>
+        <url-pattern>/question</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Tags</servlet-name>
+        <jsp-file>/WEB-INF/jsp/tags.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Tags</servlet-name>
+        <url-pattern>/tags</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Profile</servlet-name>
+        <jsp-file>/WEB-INF/jsp/profile.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Profile</servlet-name>
+        <url-pattern>/profile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignIn</servlet-name>
+        <jsp-file>/WEB-INF/jsp/sign_in.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignIn</servlet-name>
+        <url-pattern>/sign_in</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignUp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/sign_up.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignUp</servlet-name>
+        <url-pattern>/sign_up</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/jsp/error/500.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/jsp/error/404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>400</error-code>
+        <location>/WEB-INF/jsp/error/400.jsp</location>
+    </error-page>
+
+
+
+
+    <listener>
+        <listener-class>by.tc.like_it.controller.listener.InitSourceListener</listener-class>
+    </listener>
+
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>by.tc.like_it.controller.filter.EncodingFilter</filter-class>
+        <init-param>
+            <param-name>characterEncoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <servlet-name>Controller</servlet-name>
+        <!--<url-pattern>/Controller</url-pattern>-->
+    </filter-mapping>
+
+</web-app>

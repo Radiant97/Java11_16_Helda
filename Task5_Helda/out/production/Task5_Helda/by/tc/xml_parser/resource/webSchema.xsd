@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="https://training.by/web"
+            xmlns:tns="https://training.by/web"
+            attributeFormDefault="unqualified"
+            elementFormDefault="qualified">
+		   
+    <xsd:element name="web-app">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+            <xsd:element name="display-name" type="xsd:string"/>
+            <xsd:element name="welcome-file-list" type="tns:welcome-file-list-type"/>
+            <xsd:element name="filter" type="tns:filter-type"/>
+            <xsd:element name="filter-mapping" type="tns:filter-mapping-type"/>
+            <xsd:element name="listener" type="tns:listener-type"/>
+            <xsd:element name="servlet" type="tns:servlet-type"/>
+            <xsd:element name="servlet-mapping" type="tns:servlet-mapping-type"/>
+            <xsd:element name="error-page" type="tns:error-page-type"/>
+        </xsd:choice>
+        <xsd:attribute name="id" type="xsd:string"/>
+        <xsd:attribute name="version" type="xsd:string"/>
+     </xsd:complexType>
+    </xsd:element>
+	
+    <xsd:complexType name="welcome-file-list-type">
+        <xsd:sequence>
+            <xsd:element name="welcome-file" type="xsd:string" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+	
+    <xsd:complexType name="filter-type">
+        <xsd:sequence>
+            <xsd:element name="filter-name" type="xsd:string"/>
+            <xsd:element name="filter-class" type="xsd:string"/>
+            <xsd:element name="init-param" type="tns:init-param-type" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="filter-mapping-type">
+        <xsd:sequence>
+            <xsd:element name="filter-name" type="xsd:string"/>
+            <xsd:element name="url-pattern" type="xsd:string"/>
+            <xsd:element name="dispatcher" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+	
+    <xsd:complexType name="listener-type">
+        <xsd:sequence>
+            <xsd:element name="listener-class" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+	
+    <xsd:complexType name="servlet-type">
+        <xsd:sequence>
+            <xsd:element name="servlet-name" type="xsd:string"/>
+            <xsd:element name="servlet-class" type="xsd:string"/>
+            <xsd:element name="init-param" type="tns:init-param-type" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+	
+    <xsd:complexType name="servlet-mapping-type">
+        <xsd:sequence>
+            <xsd:element name="servlet-name" type="xsd:string"/>
+            <xsd:element name="url-pattern" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+	
+    <xsd:complexType name="error-page-type">
+        <xsd:sequence>
+            <xsd:choice>
+                <xsd:element name="exception-type" type="xsd:string"/>
+                <xsd:element name="error-code" type="xsd:integer"/>
+            </xsd:choice>
+            <xsd:element name="location" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="init-param-type">
+        <xsd:sequence>
+            <xsd:element name="param-name" type="xsd:string"/>
+            <xsd:element name="param-value" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
