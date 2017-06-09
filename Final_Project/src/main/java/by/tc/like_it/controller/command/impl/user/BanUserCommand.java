@@ -28,8 +28,6 @@ public class BanUserCommand implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-
         Locale locale = RequestHandler.getLocale(request);
 
         int userId = Integer.parseInt(request.getParameter(ParameterName.USER_ID));
@@ -42,17 +40,17 @@ public class BanUserCommand implements Command {
         } catch (ServiceException e) {
             LOGGER.error(e);
 
-//            LocalResourceManager locManager = LocalResourceManager.getInstance();
-//            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-//            response.getWriter().print(locManager.getValue(LocalParameter.INTERNAL_SERVER_ERROR,
-//                    locale));
+            LocalResourceManager locManager = LocalResourceManager.getInstance();
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            response.getWriter().print(locManager.getValue(LocalParameter.INTERNAL_SERVER_ERROR,
+                    locale));
         } catch (ServiceWrongDataException e) {
             LOGGER.info(e);
 
-//            LocalResourceManager locManager = LocalResourceManager.getInstance();
-//            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-//            response.getWriter().print(locManager.getValue(LocalParameter.WRONG_PARAM_ERROR,
-//                    locale));
+            LocalResourceManager locManager = LocalResourceManager.getInstance();
+            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            response.getWriter().print(locManager.getValue(LocalParameter.WRONG_PARAM_ERROR,
+                    locale));
         }
     }
 }
